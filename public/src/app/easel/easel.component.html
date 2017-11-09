@@ -1,0 +1,11 @@
+<div #paint (mousedown) = "isDrawing($event)" (mouseup) = "isNotDrawing($event)" (mouseleave) = "isNotDrawing($event)">
+  <canvas #myCanvas width="300" height="400" (mousemove)="draw($event)"></canvas>
+</div>
+  <button #black (click) = "colorBlack($event)">Black</button>
+  <button #red (click) = "colorRed($event)">Red</button>
+  <button #yellow (click) = "colorYellow($event)">Yellow</button>
+  <button #green (click) = "colorGreen($event)">Green</button>
+  <button #blue (click) = "colorBlue($event)">Blue</button>
+  <button #bigsmall (click) = "toggleSize($event)">Change Brush Size</button>
+  <button #saveData (click) = "saveImage($event)">Save Image </button>
+  <button #reload (click) = "restoreImage($event)"> Restore Image </button>
